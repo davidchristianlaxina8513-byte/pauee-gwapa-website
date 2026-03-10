@@ -1,0 +1,128 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Pau 💖</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: "Comic Sans MS", cursive;
+    background: linear-gradient(135deg,#ffc0cb,#ffe6f2);
+    text-align:center;
+    overflow:hidden;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    max-width:700px;
+    margin:120px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+color:#ff4d6d;
+}
+
+button{
+padding:12px 22px;
+border:none;
+background:#ff4d6d;
+color:white;
+font-size:16px;
+border-radius:12px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#ff1e4d;
+}
+
+/* heart animation */
+
+.heart{
+position:fixed;
+font-size:22px;
+animation: float 4s linear forwards;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) scale(1);
+opacity:1;
+}
+100%{
+transform:translateY(-800px) scale(1.5);
+opacity:0;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Background Music -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/OMOGaugKpzs?autoplay=1&loop=1&playlist=OMOGaugKpzs"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+<div class="card">
+
+<h1>Hi Pauee 💖</h1>
+
+<p style="font-size:18px; line-height:1.6">
+
+Good morning, good afternoon, and good evening.  
+In case I didn't greet you today, good day to you!  
+
+pa hh nasd ko oh hahaha bitaw oy, do good always and keep safe.  
+
+Don't forget to smile, Pau. Always remember to find your happiness, and if you don't, I'll find a way to make you smile; just let me know and I'll be there.  
+
+Feel free to come back here if you are feeling down or sad; it will remind you that you have someone to hold on to.
+</p>
+
+<button onclick="openPoem()">Read Something Special 📖</button>
+
+</div>
+
+<script>
+
+/* floating hearts */
+
+function createHeart(){
+const heart = document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="💖";
+
+heart.style.left = Math.random()*100 + "vw";
+heart.style.bottom = "0px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},4000);
+}
+
+setInterval(createHeart,500);
+
+
+/* open poem page */
+
+function openPoem(){
+window.location.href="poem.html";
+}
+
+</script>
+
+</body>
+</html>
